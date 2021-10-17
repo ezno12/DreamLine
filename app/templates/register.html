@@ -7,24 +7,30 @@
                 <div class="title">Welcome</div>
                 <div class="subtitle">Let's create your account!</div>
                 <div class="input-container ic1">
-                    {{ form.username(id="username", class="input", type="text", placeholder="Username") }}
-
+                    {{ form.username(id="username", class="input", type="text", placeholder=" ") }}
+                    <div class="cut"></div>
+                    <label for="username" class="placeholder">Username</label>
                 </div>
                 <div class="input-container ic1">
-                    {{ form.first_name(id="firstname", class="input", type="text", placeholder="First Name") }}
-
+                    {{ form.first_name(id="firstname", class="input", type="text", placeholder=" ") }}
+                    <div class="cut"></div>
+                    <label for="firstname" class="placeholder">First Name</label>
                 </div>
                 <div class="input-container ic2">
-                    {{ form.last_name(id="lastname", class="input", type="text", placeholder="Last Name") }}
 
+                    {{ form.last_name(id="lastname", class="input", type="text", placeholder=" ") }}
+                    <div class="cut"></div>
+                    <label for="lastname" class="placeholder">Last Name</label>
                 </div>
                 <div class="input-container ic2">
-                    {{ form.password1(id="password", class="input", type="text", placeholder="Password") }}
-
+                    {{ form.password1(id="password", class="input", type="text", placeholder=" ") }}
+                    <div class="cut"></div>
+                    <label for="password" class="placeholder">Password</label>
                 </div>
                 <div class="input-container ic2">
-                    {{ form.password2(id="password", class="input", type="text", placeholder=" Confirm Password") }}
-
+                    {{ form.password2(id="password", class="input", type="text", placeholder=" ") }}
+                    <div class="cut"></div>
+                    <label for="password" class="placeholder">Password</label>
                 </div> <br>{{ form.submit(type="text", class="submit") }}
 
         </form>

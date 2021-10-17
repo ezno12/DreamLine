@@ -366,7 +366,7 @@
             font-size: 0.8rem;
         }
     }
-    /**/
+    /*register page CSS*/
     
     .body-form {
         align-items: center;
@@ -379,7 +379,7 @@
         background-color: #08d;
         border-radius: 20px;
         box-sizing: border-box;
-        height: 580px;
+        height: 650px;
         padding: 20px;
         width: 420px;
     }
@@ -427,8 +427,27 @@
         width: 100%;
     }
     
+    .cut {
+        background-color: #15172b;
+        border-radius: 10px;
+        height: 20px;
+        left: 20px;
+        position: absolute;
+        top: -20px;
+        transform: translateY(0);
+        transition: transform 200ms;
+        width: 76px;
+        visibility: hidden;
+    }
+    
+    .cut-short {
+        width: 50px;
+    }
+    
+    .input:focus~.cut,
     .input:not(:placeholder-shown)~.cut {
         transform: translateY(8px);
+        visibility: visible;
     }
     
     .placeholder {
@@ -452,6 +471,11 @@
         color: #808097;
     }
     
+    .input:focus~.placeholder {
+        color: #dc2f55;
+        font-weight: 600;
+    }
+    
     .submit {
         background-color: #dc2f55;
         border-radius: 12px;
@@ -463,14 +487,12 @@
         font-size: 18px;
         font-weight: 800;
         height: 50px;
-        margin-top: 38px;
-        /**/
         outline: 0;
         text-align: center;
         width: 100%;
     }
     
     .submit:hover {
-        background-color: rgb(62, 226, 12);
+        background-color: #15172b;
         color: #eee;
     }
