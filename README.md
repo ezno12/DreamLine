@@ -8,6 +8,7 @@ pip3 install SQLAlchemy
 apt-get install python3-dev
 pip3 install flask_wtf
 pip3 install wtforms
+pip3 install wtforms.validators
 
 for start the app use command: python3 run.py
 
