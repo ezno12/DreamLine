@@ -18,8 +18,9 @@
             <header>
                 <div class="container">
                     <div class="logo">
-                        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" />
-
+                        <a href="{{ '/' }}">
+                            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" />
+                        </a>
                     </div>
 
                     <div class="links">
@@ -27,7 +28,7 @@
                             <li><a href="#">Define Dreams</a></li>
                             <li><a href="#">Costs &expences</a></li>
                             <li><a href="#">Target Monthly Income</a></li>
-                            <li><a href="#" class="btn">Sign up</a></li>
+                            <li><a href="{{ 'register' }}" class="btn">Sign up</a></li>
                         </ul>
                     </div>
 
@@ -49,7 +50,7 @@
                             Dreamline is a technique for achieving one's personal dreams based on writing them down and performing time and cost calculations.
                         </p>
                         <div class="cta">
-                            <a href="#" class="btn">Get started</a>
+                            <a href="{{ 'register' }}" class="btn">Get started</a>
                         </div>
                     </div>
 

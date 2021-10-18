@@ -17,32 +17,34 @@
             <header>
                 <div class="container">
                     <div class="logo">
-                        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" />
+                        <a href="{{ '/' }}">
 
+                            <img src="{{ url_for( 'static', filename='img/logo.png' ) }} " alt="Logo " />
+                        </a>
                     </div>
 
-                    <div class="links">
+                    <div class="links ">
                         <ul>
-                            <li><a href="#">Dreams</a></li>
-                            <li><a href="#">Costs &expences</a></li>
-                            <li><a href="#">Target Monthly Income</a></li>
+                            <li><a href="# ">Dreams</a></li>
+                            <li><a href="# ">Costs &expences</a></li>
+                            <li><a href="# ">Target Monthly Income</a></li>
 
                         </ul>
                     </div>
 
-                    <div class="overlay"></div>
+                    <div class="overlay "></div>
 
-                    <div class="hamburger-menu">
-                        <div class="bar"></div>
+                    <div class="hamburger-menu ">
+                        <div class="bar "></div>
                     </div>
                 </div>
             </header>
             {% block content %} {% endblock %}
-            <div class="bottom-area">
-                <div class="container">
-                    <button class="toggle-btn">
-              <i class="far fa-moon"></i>
-              <i class="far fa-sun"></i>
+            <div class="bottom-area ">
+                <div class="container ">
+                    <button class="toggle-btn ">
+              <i class="far fa-moon "></i>
+              <i class="far fa-sun "></i>
             </button>
                 </div>
             </div>
@@ -52,7 +54,7 @@
     <!-- JavaScript Files -->
 
 
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for( 'static', filename='js/app.js' ) }} "></script>
 </body>
 
 
