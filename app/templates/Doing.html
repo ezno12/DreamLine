@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doing</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+       section {
+        position: relative;
+        max-width: 81rem;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 3rem;
+        z-index: 10;
+       }
+       h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+select {
+  margin-bottom: 60px;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.move-on {
+  
+  font-size: 1.5rem;
+  margin: 1.9rem 0 2.5rem;
+  max-width: 600px;
+  line-height: 2.3;
+  font-weight: 500;
+}
+
+section img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: -18px;
+}
+ #being-img {
+    height: 40px;
+    width: 40px;
+    
+}
+
+input {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    grid-template-columns: 1fr;
+    margin-bottom: 10px;
+    font-size: 25px;
+   
+}
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="big-wrapper light">
+            <img src="./img/shape.png" alt="" class="shape" />
+    
+            <header>
+              <div class="container">
+                <div class="logo">
+                  <img src="./img/logo.png" alt="Logo" />
+                  
+                </div>
+    
+                <div class="links">
+                  <ul>
+                    <li><a href="#">Define Dreams</a></li>
+                    <li><a href="#">Costs &expences</a></li>
+                    <li><a href="#">Target Monthly Income</a></li>
+                    <li><a href="#" class="btn">Sign up</a></li>
+                    <li><a href="#" class="btn">login</a></li>
+                  </ul>
+                </div>
+    
+                <div class="overlay"></div>
+    
+                <div class="hamburger-menu">
+                  <div class="bar"></div>
+                </div>
+              </div>
+              <section id="define--dreams">
+              <h1> <img src="./img/doing.png"> Doing</h1>
+              
+              <p>
+                  What do you dream of Doing ?
+              </p>
+              <p>Select here</p>
+              
+              <div class="input">
+                <input id="selected" type="text" value="travel">
+                <input id="selected" type="text" value="marry">
+                <input id="selected" type="text" value="openyour own project">
+                <input id="selected" type="text" value="invest">
+                <div id="duplicater0">
+                    <input  type="text" value="add rows +">
+                </div>
+            </div>
+            
+              <p class="move-on">
+                  Move on to your Doing Dreamlines: <img id="being-img" src="./img/doing.png"> <a href="#">Doing</a>
+              </p>
+            </section>
+            </header>
+            
+        </div>    
+    </main>
+    <!-- JavaScript Files -->
+    <script src="./app.js">
+    </script>
+    <script>
+    document.getElementById('duplicater0').onclick = duplicate;
+    var i = 0;
+
+    function duplicate() {
+        var original = document.getElementById('duplicater' + i);
+        var clone = original.cloneNode(true); // "deep" clone
+        clone.id = "duplicater" + ++i; // there can only be one element with an ID
+        clone.onclick = duplicate; // event handlers are not cloned
+        original.parentNode.appendChild(clone);
+   }
+    </script>
+</body>
+</html>
