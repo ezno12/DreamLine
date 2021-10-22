@@ -1,40 +1,46 @@
 {% extends 'base.html' %} {% block title%} {% endblock%}{% block content%}
-
-<body class="text-center">
-    <div class="container">
-        <form method="POST" class="body-form">
-            {{ form.hidden_tag() }}
-            <div class=" form ">
-                <div class="title ">Welcome</div>
-                <div class="subtitle ">Let's create your account!</div>
-                <div class="input-container ic1 ">
-                    {{ form.username(id="username ", class="input ", type="text", placeholder=" ") }}
-                    <div class="cut "></div>
-                    <label for="username " class="placeholder ">Username</label>
-                </div>
-                <div class="input-container ic1 ">
-                    {{ form.first_name(id="firstname ", class="input ", type="text", placeholder=" ") }}
-                    <div class="cut "></div>
-                    <label for="firstname " class="placeholder ">First Name</label>
-                </div>
-                <div class="input-container ic2 ">
-
-                    {{ form.last_name(id="lastname ", class="input ", type="text", placeholder=" ") }}
-                    <div class="cut "></div>
-                    <label for="lastname " class="placeholder ">Last Name</label>
-                </div>
-                <div class="input-container ic2 ">
-                    {{ form.password1(id="password ", class="input ", type="password", placeholder=" ") }}
-                    <div class="cut "></div>
-                    <label for="password " class="placeholder ">Password</label>
-                </div>
-                <div class="input-container ic2 ">
-                    {{ form.password2(id="password ", class="input ", type="password", placeholder=" ") }}
-                    <div class="cut "></div>
-                    <label for="password " class="placeholder ">Password</label>
-                </div> <br>{{ form.submit(type="submit", class="submit ") }}
-
-        </form>
-        </div>
+<div class="error_msg">{% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}
+    <div class="alert alert-{{ category }}">
+        <button type="button" class="m1-2 mb-1 close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button> {{ message }}
     </div>
-</body>{% endblock %}
+    {% endfor %} {% endif %} {% endwith %}</div>
+<div class="container">
+    <form method="POST" class="body-form">
+        <!-- protect from CSRF attack -->
+        {{ form.hidden_tag() }}
+        <div class=" form ">
+            <div class="title ">Welcome</div>
+            <div class="subtitle ">Let's create your account!</div>
+            <div class="input-container ic1 ">
+                {{ form.username(id="username ", class="input ", type="text", placeholder=" ") }}
+                <div class="cut "></div>
+                <label for="username " class="placeholder ">Username</label>
+            </div>
+            <div class="input-container ic1 ">
+                {{ form.first_name(id="firstname ", class="input ", type="text", placeholder=" ") }}
+                <div class="cut "></div>
+                <label for="firstname " class="placeholder ">First Name</label>
+            </div>
+            <div class="input-container ic2 ">
+
+                {{ form.last_name(id="lastname ", class="input ", type="text", placeholder=" ") }}
+                <div class="cut "></div>
+                <label for="lastname " class="placeholder ">Last Name</label>
+            </div>
+            <div class="input-container ic2 ">
+                {{ form.password1(id="password ", class="input ", type="password", placeholder=" ") }}
+                <div class="cut "></div>
+                <label for="password " class="placeholder ">Password</label>
+            </div>
+            <div class="input-container ic2 ">
+                {{ form.password2(id="password ", class="input ", type="password", placeholder=" ") }}
+                <div class="cut "></div>
+                <label for="password " class="placeholder ">Password</label>
+            </div> <br>{{ form.submit(type="submit", class="submit ") }}
+
+    </form>
+    </div>
+</div>
+{% endblock %}
