@@ -2,7 +2,7 @@
 """
 modul contain User database
 """
-from app.app import db
+from app.app import *
 
 
 class User(db.Model):

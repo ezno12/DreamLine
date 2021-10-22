@@ -60,7 +60,7 @@
         position: relative;
         max-width: 81rem;
         width: 100%;
-        margin: 0 auto;
+        margin: 3% auto;
         padding: 0 3rem;
         z-index: 10;
     }
@@ -495,4 +495,9 @@
     .submit:hover {
         background-color: #15172b;
         color: #eee;
+    }
+    /*error_message_class_in_register_page*/
+    
+    .error_msg {
+        margin: 0.5% 20% 3% 20%;
     }
