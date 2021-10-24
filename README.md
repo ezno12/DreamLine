@@ -9,6 +9,8 @@ apt-get install python3-dev
 pip3 install flask_wtf
 pip3 install wtforms
 pip3 install wtforms.validators
+pip3 install Flask-Bcrypt
+pip3 install flask_login
 
 for start the app use command: python3 run.py
 

@@ -1,20 +1,33 @@
 {% extends 'base.html' %} {% block title%} {% endblock%}{% block content%}
-
-<body class="text-center">
-    <div class="container">
-        <form method="POST" class="body-form" style="color:black">
-            <div class="form">
-                <div class="title">Welcome</div>
-                <div class="subtitle">Let's create your account!</div>
-                <div class="input-container ic1">
-                    {{ form.username(id="username", class="input", type="text", placeholder="Username") }}
-
-                </div>
-                <div class="input-container ic2">
-                    {{ form.password1(id="password", class="input", type="text", placeholder="Password") }}
-
-                </div>
-        </form>
+<div class="container">
+    <form method="POST" class="body-form">
+        <!-- protect from CSRF attack -->
+        {{ form.hidden_tag() }}
+        <h1 class="h3 mb-3 font-weight-normal">
+            Please Login
+        </h1>
+        <br>
+        <div class="input-container ic1 ">
+            {{ form.username(id="username ", class="input ", type="text", placeholder=" ") }}
+            <div class="cut "></div>
+            <label for="username " class="placeholder ">Username</label>
         </div>
-    </div>
-</body>{% endblock%}
+        <br>
+        <div class="input-container ic2 ">
+            {{ form.password(id="password ", class="input ", type="password", placeholder=" ") }}
+            <div class="cut "></div>
+            <label for="password" class="placeholder ">Password</label>
+        </div>
+
+        <br>
+
+
+        <div class="checkbox mb-3">
+            <h6>Do not have an account?</h6>
+            <a class="btn submit" href="{{ url_for('register_page') }}">Register</a>
+        </div>
+        <br> {{ form.submit(type="submit", class="submit btn") }}
+
+    </form>
+</div>
+</div>{% endblock%}
