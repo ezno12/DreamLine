@@ -1,33 +1,39 @@
 {% extends 'base.html' %} {% block title%} {% endblock%}{% block content%}
+
 <div class="container">
+
+    <h1 class="h3 mb-3 font-weight-normal">
+        Please Login
+    </h1>
+
     <form method="POST" class="body-form">
         <!-- protect from CSRF attack -->
         {{ form.hidden_tag() }}
-        <h1 class="h3 mb-3 font-weight-normal">
-            Please Login
-        </h1>
-        <br>
-        <div class="input-container ic1 ">
+        <div class="input-login ">
             {{ form.username(id="username ", class="input ", type="text", placeholder=" ") }}
             <div class="cut "></div>
             <label for="username " class="placeholder ">Username</label>
         </div>
-        <br>
-        <div class="input-container ic2 ">
+
+        <div class="input-login">
             {{ form.password(id="password ", class="input ", type="password", placeholder=" ") }}
             <div class="cut "></div>
             <label for="password" class="placeholder ">Password</label>
         </div>
+        {{ form.submit(type="submit", class="submit-login btn") }}
 
-        <br>
 
 
-        <div class="checkbox mb-3">
-            <h6>Do not have an account?</h6>
-            <a class="btn submit" href="{{ url_for('register_page') }}">Register</a>
-        </div>
-        <br> {{ form.submit(type="submit", class="submit btn") }}
 
     </form>
+
+    <h6>Do not have an account?</h6>
+    <div class="checkbox mb-3">
+
+        <a class="btn submit-login" href="{{ url_for('register_page') }}">Register</a>
+    </div>
+
+
 </div>
+
 </div>{% endblock%}

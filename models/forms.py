@@ -37,3 +37,29 @@ class LoginForm(FlaskForm):
     username = StringField(validators=[DataRequired()])
     password = PasswordField(validators=[DataRequired()])
     submit = SubmitField(label='Sign in')
+
+
+class DreamsForm(FlaskForm):
+    """
+    """
+    dream1 = StringField()
+    dream2 = StringField()
+    dream3 = StringField()
+
+class Having(DreamsForm):
+    """"""
+    havingDream1 = DreamsForm.dream1
+    havingDream2 = DreamsForm.dream2
+    havingDream3 = DreamsForm.dream3
+
+class Being(DreamsForm):
+    """"""
+    beingDream1 = DreamsForm.dream1
+    beingDream2 = DreamsForm.dream2
+    beingDream3 = DreamsForm.dream3
+
+class Doing(DreamsForm):
+    """"""
+    doingDream1 = DreamsForm.dream1
+    doingDream2 = DreamsForm.dream2
+    doingDream3 = DreamsForm.dream3

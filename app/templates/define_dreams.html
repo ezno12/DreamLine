@@ -1,0 +1,385 @@
+{% extends 'base.html' %} {% block title%} {% endblock%}{% block content%}
+<section id="define--dreams">
+    <section id="showed-by-defaulf">
+        <h1>Define Dreams</h1>
+        <p class="">
+            Define dreams with things you want to Have and Do and what you want to Be in the Dreamline calculator in 12-month
+        </p>
+
+
+        <p class="move-on">
+            Start with your Having Dreamlines: <img id="ha-img" src="{{ url_for('static', filename='img/having.png') }}"> <a id="display-having" href="#">Having</a>
+        </p>
+    </section>
+    <section id="show-having">
+        <h1> <img id="ha-imgg" src="{{ url_for('static', filename='img/having.png') }}"> Having</h1>
+
+        <p>
+            What do you dream of Having ?
+        </p>
+        <p class="select-here">Select here</p>
+
+        <div id="having-selected">
+            <form class="form-dream">
+                <label class="checkbox" for="ha1">
+    <input class="checkbox__input" type="checkbox" name="ha1" id="ha1">
+    <div class="checkbox__box"></div>
+    {{ have.havingDream1(id="havingDream1", class="input", type="text", placeholder="big house") }}
+
+  </label>
+                <label class="checkbox" for="ha2">
+    <input class="checkbox__input" type="checkbox" name="ha2" id="ha2">
+    <div class="checkbox__box"></div>
+    {{ have.havingDream2(id="havingDream2", class="input ", type="text", placeholder="Nice car") }}
+
+  </label>
+                <label class="checkbox" for="ha3">
+    <input class="checkbox__input" type="checkbox" name="ha3" id="ha3">
+    <div class="checkbox__box"></div>
+    {{ have.havingDream3(id="havingDream3", class="input ", type="text", placeholder="gaming computer") }}
+
+            </form>
+        </div>
+
+        <p class="move-on">
+            Move on to your Being Dreamlines: <img id="being-img" src="{{ url_for('static', filename='img/being.png') }}"> <a id="display-being" href="#">Being</a>
+        </p>
+    </section>
+    <section id="show-being">
+        <h1> <img src="{{ url_for('static', filename='img/being.png') }}"> Being</h1>
+
+        <p>
+            What do you dream of Being ?
+        </p>
+        <p class="select-here">Select here</p>
+
+        <div id="being-selected">
+            <form class="form-dream">
+                <label class="checkbox" for="ba1">
+      <input class="checkbox__input" type="checkbox" name="ba1" id="ba1">
+      <div class="checkbox__box"></div>
+      {{ be.beingDream1(id="havingDream1", class="input ", type="text", placeholder="famous") }}
+    </label>
+                <label class="checkbox" for="ba2">
+      <input class="checkbox__input" type="checkbox" name="ba2" id="ba2">
+      <div class="checkbox__box"></div>
+      {{ be.beingDream2(id="havingDream1", class="input ", type="text", placeholder="good seller") }}
+
+    </label>
+                <label class="checkbox" for="ba3">
+      <input class="checkbox__input" type="checkbox" name="ba3" id="ba3">
+      <div class="checkbox__box"></div>
+      {{ be.beingDream3(id="havingDream1", class="input ", type="text", placeholder="good speaker") }}
+
+            </form>
+
+        </div>
+
+        <p class="move-on">
+            Move on to your Doing Dreamlines: <img id="being-img" src="{{ url_for('static', filename='img/doing.png') }}"> <a id="display-doing" href="#">Doing</a>
+        </p>
+    </section>
+    <section id="show-doing">
+        <h1> <img src="{{ url_for('static', filename='img/doing.png') }}"> Doing</h1>
+
+        <p>
+            What do you dream of Doing ?
+        </p>
+        <p class="select-here">Select here</p>
+
+        <div id="doing-selected">
+            <form class="form-dream">
+                <label class="checkbox" for="da1">
+      <input class="checkbox__input" type="checkbox" name="da1" id="da1">
+      <div class="checkbox__box"></div>
+      {{ do.doingDream1(id="havingDream1", class="input ", type="text", placeholder="travel to japon") }}
+    </label>
+                <label class="checkbox" for="da2">
+      <input class="checkbox__input" type="checkbox" name="da2" id="da2">
+      <div class="checkbox__box"></div>
+      {{ do.doingDream2(id="havingDream1", class="input ", type="text", placeholder="marry") }}
+    </label>
+                <label class="checkbox" for="da3">
+      <input class="checkbox__input" type="checkbox" name="da3" id="da3">
+      <div class="checkbox__box"></div>
+      {{ do.doingDream3(id="havingDream1", class="input ", type="text", placeholder="start own Business") }}
+    </label>
+            </form>
+
+        </div>
+
+        <p class="move-on">
+            Done with Doing? Move on to : <img id="being-img" src="{{ url_for('static', filename='img/pick.png') }}"> <a id="display-pick" href="#">Pick 3 Dreams</a>
+        </p>
+    </section>
+    <section id="show-pick">
+        <h1> <img src="{{ url_for('static', filename='img/pick.png') }}"> Pick 3 dreams</h1>
+
+        <p>
+            Review all the <a href="#">Having</a>, <a href="#">Being</a>,
+            <a class="space-right" href="#">Doing</a> dreams you wrote in the last 3 steps, and pick 3 that would change your life.
+        </p>
+
+
+        <div id="having-input">
+            <button class="btn-outline" onclick="getHaving()">Having</button>
+
+        </div>
+        <div id="being-input">
+            <button class="btn-outline" onclick="getBeing()">Being</button>
+
+        </div>
+        <div id="doing-input">
+            <button class="btn-outline" onclick="getDoing()">Doing</button>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <p class="move-on">
+            Done with picking dreams? Move to: <img id="pick-img" src="{{ url_for('static', filename='img/costs.png') }}"> <a id="display-costs" href="#">Costs & Actions</a>
+        </p>
+    </section>
+
+    <section id="show-costs">
+        <h1> <img src="{{ url_for('static', filename='img/costs.png') }}"> Costs & Actions</h1>
+
+        <p>
+            Now, determinethe costs of each dream you selected and indicate if it is monthly or one-time cost.
+        </p>
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Dream</th>
+                <th>Costs</th>
+                <th>Cost Type</th>
+            </tr>
+            <tr>
+                <td>
+                    <p>Having</p>
+                </td>
+                <td>
+                    <input type="text" placeholder="dream">
+
+                </td>
+                <td>
+                    <input type="number" placeholder="$000">
+                </td>
+                <td>
+                    <select>
+      <option>one-time</option>
+      <option>monthly</option>
+      </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Being</p>
+                </td>
+                <td>
+                    <input type="text" placeholder="dream">
+
+
+                </td>
+                <td>
+                    <input type="number" placeholder="$000">
+
+                </td>
+                <td>
+                    <select>
+      <option>one-time</option>
+      <option>monthly</option>
+      </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Doing</p>
+                </td>
+                <td>
+                    <input type="text" placeholder="dream">
+
+
+                </td>
+                <td>
+                    <input type="number" placeholder="$000">
+
+                </td>
+                <td>
+                    <select>
+      <option>one-time</option>
+      <option>monthly</option>
+      </select>
+
+                </td>
+            </tr>
+
+        </table>
+        <p>
+            It's time to take action! Write the steps you need to do now, tomorrow, and the day after to acheive your dreams.
+        </p>
+
+        <table>
+            <tr>
+                <th>Dream</th>
+                <th>Steps Now</th>
+                <th>Steps Tomorrow</th>
+                <th>Steps Day After</th>
+            </tr>
+            <tr>
+                <td><input class="hdream"></td>
+                <td><input></td>
+                <td><input></td>
+                <td><input></td>
+            </tr>
+            <tr>
+                <td><input class="hdream"></td>
+                <td><input></td>
+                <td><input></td>
+                <td><input></td>
+            </tr>
+            <tr>
+                <td><input class="hdream"></td>
+                <td><input></td>
+                <td><input></td>
+                <td><input></td>
+            </tr>
+
+
+        </table>
+
+        <p class="move-on">
+            Move on to the last step: <img id="pick-img" src="{{ url_for('static', filename='img/expences.png') }}"> <a id="display-expenses" href="#">Monthly Expenses</a>
+        </p>
+    </section>
+
+    <section id="show-expenses">
+        <h1> <img src="{{ url_for('static', filename='img/expences.png') }}"> Monthly Expences</h1>
+
+        <p>
+            List your monthly expences. These will be multiplied by 1.3(your expences + a 30% buffer for safety or savings) and add it to your dreams' costs to determine your <img src="./img/income.png"> <a href="#">Target Monthly Income</a>
+        </p>
+
+        <table class="target">
+            <tr>
+                <th>Expense Category</th>
+                <th>Monthly Cost</th>
+            </tr>
+            <tr>
+                <td class="first"><input type="text" placeholder="Rent/Mortgage"></td>
+                <td class="second"><input type="number" placeholder="$0"></td>
+            </tr>
+            <tr>
+                <td class="first"><input type="text" placeholder="Property Taxes"></td>
+                <td class="second"><input type="number" placeholder="$0"></td>
+            </tr>
+            <tr>
+                <td class="first"><input type="text" placeholder="Education/Tuition"></td>
+                <td class="second"><input type="number" placeholder="$0"></td>
+            </tr>
+            <tr>
+                <td class="first"><input type="text" placeholder="Car payments"></td>
+                <td class="second"><input type="number" placeholder="$0"></td>
+            </tr>
+            <tr>
+                <td class="first"><input type="text" placeholder="Telephone"></td>
+                <td class="second"><input type="number" placeholder="$0"></td>
+            </tr>
+            <tr>
+                <td class="first"><input type="text" placeholder="Water/Electricity"></td>
+                <td class="second"><input type="number" placeholder="$0"></td>
+            </tr>
+            <tr>
+                <td class="first"><input type="text" placeholder="Gasoline"></td>
+                <td class="second"><input type="number" placeholder="$0"></td>
+            </tr>
+            <tr>
+                <td class="first"><input type="text" placeholder="Public Transportaion"></td>
+                <td class="second"><input type="number" placeholder="$0"></td>
+            </tr>
+            <tr>
+                <td class="first"><input type="text" placeholder="Eating out"></td>
+                <td class="second"><input type="number" placeholder="$0"></td>
+            </tr>
+
+        </table>
+
+
+        <p class="move-on">
+            You're all done! See your TMI:: <img id="pick-img" src="{{ url_for('static', filename='img/income.png') }}"> <a id="display-target" href="#">Target Monthly Income</a>
+        </p>
+    </section>
+
+    <section id="show-target">
+        <h1> <img src="{{ url_for('static', filename='img/income.png') }}"> Target Monthly Income</h1>
+
+        <p>
+            Welldone you've completed your dreamline calculator! Below is your summary:
+        </p>
+        <h3>Monthly Expenses with 30% Buffer</h3>
+        <span class="cash">$0.00</span>
+        <h3>Target Monthly Income(TMI) 12 monthes</h3>
+        <p class="summary">Monthly cashflow you need to acheive your dreams and live your ideal lifestyle.(One-time expenses have been divided by total monthes in dreamline).
+
+        </p>
+        <span class="cash">$0.00 = $0.00 + $0.00 + $0.00 + $0.00</span>
+        <p class="summary">
+            Target Monthly Income = "Having" Costs + "Being" Costs + "Doing" Costs + (1.3 X Monthly Expenses)
+        </p>
+        <h3>Target Daily Income (TDI)</h3>
+        <p class="summary">
+            Daily cashflow you need to acheive your dreams and live your ideal lifestyle
+        </p>
+        <span class="cash">$0.00</span>
+        <p class="summary">
+            (Target Daily Income = TMI/30)
+        </p>
+        <h2>Summary</h2>
+        <button class="btn-outline" id="display-having-summary">Having</button>
+        <div id="having-summary">
+            <h3>Dreams:</h3>
+            <p>your dreams here</p>
+            <h3>Step Now:</h3>
+            <p>your step here</p>
+            <h3>Step tomorrow:</h3>
+            <p>your step here</p>
+            <h3>Step day after:</h3>
+            <p>your step here</p>
+        </div>
+        <button class="btn-outline" id="display-being-summary">Being</button>
+        <div id="Being-summary">
+            <h3>Dreams:</h3>
+            <p>your dreams here</p>
+            <h3>Step Now:</h3>
+            <p>your step here</p>
+            <h3>Step tomorrow:</h3>
+            <p>your step here</p>
+            <h3>Step day after:</h3>
+            <p>your step here</p>
+        </div>
+        <button class="btn-outline" id="display-doing-summary">Doing</button>
+        <div id="Doing-summary">
+            <h3>Dreams:</h3>
+            <p>your dreams here</p>
+            <h3>Step Now:</h3>
+            <p>your step here</p>
+            <h3>Step tomorrow:</h3>
+            <p>your step here</p>
+            <h3>Step day after:</h3>
+            <p>your step here</p>
+        </div>
+
+    </section>
+
+</section>
+</header>
+{% endblock%}

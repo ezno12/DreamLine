@@ -2,4 +2,4 @@
 modul contain inizaltion database
 """
 from models.user import User
-from models.forms import RegisterForm
+from models.forms import RegisterForm, Having, Being, Doing

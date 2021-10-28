@@ -30,7 +30,7 @@
 
                     <div class="links ">
                         <ul>
-                            <li><a href="# ">Dreams</a></li>
+                            <li><a href="{{ 'dreams' }}">Dreams</a></li>
                             <li><a href="# ">Costs &expences</a></li>
                             <li><a href="# ">Target Income</a></li>
                         </ul>
@@ -71,6 +71,35 @@
             </button>
                 </div>
             </div>
+
+            <footer class="container">
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy & Policy</a>
+                    </li>
+                </ul>
+                <div class="social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-snapchat"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <p class="copyright">
+                    &copy; Dreamline 2021
+                </p>
+            </footer>
         </div>
     </main>
 
@@ -82,6 +111,83 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#show-having').hide();
+            $('#show-being').hide();
+            $('#show-doing').hide();
+            $('#show-pick').hide();
+            $('#show-expenses').hide();
+            $('#show-target').hide();
+            $('#show-costs').hide();
+            $('#having-summary').hide();
+            $('#Being-summary').hide();
+            $('#Doing-summary').hide();
+            $('#display-having').on('click', function() {
+                $('#show-having').show(2000);
+                $('#showed-by-defaulf').hide();
+            });
+            $('#display-being').on('click', function() {
+                $('#show-being').show(2000);
+                $('#show-having').hide();
+            });
+            $('#display-doing').on('click', function() {
+                $('#show-doing').show(2000);
+                $('#show-being').hide();
+            });
+            $('#display-pick').on('click', function() {
+                $('#show-pick').show(3000);
+                $('#show-doing').hide();
+            });
+            $('#display-costs').on('click', function() {
+                $('#show-costs').show(3000);
+                $('#show-pick').hide();
+            });
+            $('#display-expenses').on('click', function() {
+                $('#show-expenses').show(3000);
+                $('#show-costs').hide();
+            });
+            $('#display-target').on('click', function() {
+                $('#show-target').show(3000);
+                $('#show-expenses').hide();
+            });
+            $('#display-having-summary').on('click', function() {
+                $('#having-summary').toggle(2000);
+
+            });
+            $('#display-being-summary').on('click', function() {
+                $('#Being-summary').toggle(2000);
+
+            });
+            $('#display-doing-summary').on('click', function() {
+                $('#Doing-summary').toggle(2000);
+
+            });
+        });
+    </script>
+    <script>
+        function getHaving() {
+            var data = document.getElementById('having-selected');
+            var pick = document.getElementById('having-input');
+            pick.append(data);
+            return;
+        }
+
+        function getBeing() {
+            var dataa = document.getElementById('being-selected');
+            var pickk = document.getElementById('being-input');
+            pickk.append(dataa);
+            return;
+        }
+
+        function getDoing() {
+            var dataaa = document.getElementById('doing-selected');
+            var pickkk = document.getElementById('doing-input');
+            pickkk.append(dataaa);
+            return;
+        }
+    </script>
 </body>
 
 
