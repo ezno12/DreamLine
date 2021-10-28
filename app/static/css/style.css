@@ -880,11 +880,8 @@ h3 {
 .team-member figure:hover figcaption ul li a:hover {
   color: rgba(49, 49, 49, .97);
 }
-.team img {
-    height: 250px;
-    
-}
-.team-member figure .img-responsive {
+
+.team-member figure img {
   -webkit-transform: scale(1) rotate(0) translateY(0);
   -moz-transform: scale(1) rotate(0) translateY(0);
   -o-transform: scale(1) rotate(0) translateY(0);
