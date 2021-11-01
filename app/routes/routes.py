@@ -9,10 +9,16 @@ from flask_login import login_user, logout_user
 
 @app.route('/')
 def home_page():
+    """
+    redrect to home page
+    """
     return render_template('index.html')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register_page():
+    """
+    sgin up page
+    """
     form = RegisterForm()
     if form.validate_on_submit():
         user_to_create = User(username=form.username.data,
@@ -28,6 +34,9 @@ def register_page():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    """
+    login page
+    """
     form = LoginForm()
     if form.validate_on_submit():
         attempted_user = User.query.filter_by(username=form.username.data).first()
@@ -43,13 +52,19 @@ def login():
     return render_template('login.html', form=form)
 
 @app.route('/logout')
-def login_page():
+def logout_page():
+    """
+    logout redirect
+    """
     logout_user()
     flash("You have been logged out!", category='info')
     return redirect(url_for("home_page"))
 
 @app.route('/dreams', methods=['GET', 'POST'])
 def dreams_page():
+    """
+    dream page _ contain main page to define dreams.
+    """
     having_Dream = Having()
     if having_Dream.validate_on_submit():
         user_having_to_create = Dreams()

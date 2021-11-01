@@ -11,6 +11,7 @@
             Start with your Having Dreamlines: <img id="ha-img" src="{{ url_for('static', filename='img/having.png') }}"> <a id="display-having" href="#">Having</a>
         </p>
     </section>
+    <!--Define Having dream-->
     <section id="show-having">
         <h1> <img id="ha-imgg" src="{{ url_for('static', filename='img/having.png') }}"> Having</h1>
 
@@ -45,6 +46,8 @@
             Move on to your Being Dreamlines: <img id="being-img" src="{{ url_for('static', filename='img/being.png') }}"> <a id="display-being" href="#">Being</a>
         </p>
     </section>
+     <!--end Having dream-->
+      <!--Define Being dream-->
     <section id="show-being">
         <h1> <img src="{{ url_for('static', filename='img/being.png') }}"> Being</h1>
 
@@ -79,6 +82,8 @@
             Move on to your Doing Dreamlines: <img id="being-img" src="{{ url_for('static', filename='img/doing.png') }}"> <a id="display-doing" href="#">Doing</a>
         </p>
     </section>
+     <!--end being dream-->
+      <!--Define Doing dream-->
     <section id="show-doing">
         <h1> <img src="{{ url_for('static', filename='img/doing.png') }}"> Doing</h1>
 
@@ -112,6 +117,7 @@
             Done with Doing? Move on to : <img id="being-img" src="{{ url_for('static', filename='img/pick.png') }}"> <a id="display-pick" href="#">Pick 3 Dreams</a>
         </p>
     </section>
+     <!--end doing dream-->
     <section id="show-pick">
         <h1> <img src="{{ url_for('static', filename='img/pick.png') }}"> Pick 3 dreams</h1>
 
@@ -142,7 +148,7 @@
 
 
 
-
+ <!--Pick the 3 dreams-->
         <p class="move-on">
             Done with picking dreams? Move to: <img id="pick-img" src="{{ url_for('static', filename='img/costs.png') }}"> <a id="display-costs" href="#">Costs & Actions</a>
         </p>
@@ -261,8 +267,9 @@
             Move on to the last step: <img id="pick-img" src="{{ url_for('static', filename='img/expences.png') }}"> <a id="display-expenses" href="#">Monthly Expenses</a>
         </p>
     </section>
-
-    <section id="show-expenses">
+ <!--end picking dream-->
+ <!--expenses-->
+ <section id="show-expenses">
         <h1> <img src="{{ url_for('static', filename='img/expences.png') }}"> Monthly Expences</h1>
 
         <p>
@@ -318,7 +325,8 @@
             You're all done! See your TMI:: <img id="pick-img" src="{{ url_for('static', filename='img/income.png') }}"> <a id="display-target" href="#">Target Monthly Income</a>
         </p>
     </section>
-
+ <!--end expences-->
+  <!--target monthly income-->
     <section id="show-target">
         <h1> <img src="{{ url_for('static', filename='img/income.png') }}"> Target Monthly Income</h1>
 
@@ -343,6 +351,8 @@
         <p class="summary">
             (Target Daily Income = TMI/30)
         </p>
+        <!--target monthly income-->
+        <!--Summmary-->
         <h2>Summary</h2>
         <button class="btn-outline" id="display-having-summary">Having</button>
         <div id="having-summary">
@@ -379,7 +389,7 @@
         </div>
 
     </section>
-
+<!--Summmary end-->
 </section>
 </header>
 {% endblock%}

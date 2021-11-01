@@ -5,6 +5,7 @@
     <h1 class="h3 mb-3 font-weight-normal">
         Please Login
     </h1>
+    <!--login form for new user-->
 
     <form method="POST" class="body-form">
         <!-- protect from CSRF attack -->
@@ -21,9 +22,6 @@
             <label for="password" class="placeholder ">Password</label>
         </div>
         {{ form.submit(type="submit", class="submit-login btn") }}
-
-
-
 
     </form>
 

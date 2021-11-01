@@ -1138,7 +1138,7 @@ p a {
     justify-content: center;
     margin-right: 10px;
     flex-shrink: 0;
-    transition: background 0.15s, border-color 0.15s;
+    transition: 0.15s, border-color 0.15s;
     margin-top: -10px;
 }
 

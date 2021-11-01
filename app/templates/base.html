@@ -19,6 +19,7 @@
     <main>
         <div class="big-wrapper light">
             <img src="{{ url_for('static', filename='img/shape.png') }}" alt="" class="shape" />
+<!--header start-->
             <header>
                 <div class="container">
                     <div class="logo">
@@ -55,14 +56,19 @@
                     </div>
                 </div>
             </header>
+<!--header end-->
+<!--Error messages start-->
             <div class="error_msg">{% with messages = get_flashed_messages(with_categories=true) %} {% if messages %} {% for category, message in messages %}
                 <div class="alert alert-{{ category }}">
                     <button type="button" class="m1-2 mb-1 close" data-dismiss="alert" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                           </button> {{ message }}
                 </div>
+                <!--Error messages start-->
                 {% endfor %} {% endif %} {% endwith %}</div>
             {% block content %} {% endblock %}
+
+<!--Dark mode-->
             <div class="bottom-area ">
                 <div class="container ">
                     <button class="toggle-btn ">
@@ -71,7 +77,8 @@
             </button>
                 </div>
             </div>
-
+<!--Dark mode end-->
+<!--Footer-->
             <footer class="container">
                 <ul>
                     <li>
@@ -100,6 +107,7 @@
                     &copy; Dreamline 2021
                 </p>
             </footer>
+<!--Footer end-->
         </div>
     </main>
 
@@ -121,6 +129,8 @@
             $('#show-expenses').hide();
             $('#show-target').hide();
             $('#show-costs').hide();
+
+            
             $('#having-summary').hide();
             $('#Being-summary').hide();
             $('#Doing-summary').hide();
@@ -128,6 +138,7 @@
                 $('#show-having').show(2000);
                 $('#showed-by-defaulf').hide();
             });
+
             $('#display-being').on('click', function() {
                 $('#show-being').show(2000);
                 $('#show-having').hide();
@@ -135,6 +146,9 @@
             $('#display-doing').on('click', function() {
                 $('#show-doing').show(2000);
                 $('#show-being').hide();
+            
+            
+            
             });
             $('#display-pick').on('click', function() {
                 $('#show-pick').show(3000);
