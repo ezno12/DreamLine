@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DreamLine
 
 sudo apt install python3.8
@@ -18,3 +19,6 @@ routes: contain route for flask
 static: contain CSS/JS/Img
 templates: contain HTML files
 models: contain database ORM files
+=======
+#Readme
+>>>>>>> 87619b547b177f1da4b72607ef69ef6d13a2006d
