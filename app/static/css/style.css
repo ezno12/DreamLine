@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 <<<<<<< HEAD
+/*color variables*/
 .light {
     --mainColor: #64bcf4;
     --hoverColor: #5bacdf;
@@ -87,7 +88,7 @@ a {
     padding: 0 3rem;
     z-index: 10;
 }
-
+/*navigation var styling*/
 header {
     position: relative;
     z-index: 70;
@@ -389,7 +390,7 @@ header .container {
         font-size: 0.8rem;
     }
 }
-
+/* features styling*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,200;1,300;1,600&display=swap');
 #features {
     background-color: #fafbfc;
@@ -929,7 +930,7 @@ header .container {
 .cut-short {
     width: 50px;
 }
-
+/* input styling */
 .input:focus~.cut,
 .input:not(:placeholder-shown)~.cut {
     transform: translateY(8px);
@@ -1189,7 +1190,7 @@ p a {
 #ha-imgg {
     margin-bottom: -15px;
 }
-
+/* tables styling */
 table {
     width: 800px;
     display: flexbox;
